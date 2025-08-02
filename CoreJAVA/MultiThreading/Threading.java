@@ -56,7 +56,7 @@ public class Threading {
     public static void main(String[] args) throws Exception {
         CounterObject counter_object = new CounterObject();
         Thread thread_one = new Thread(() -> {
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i < 10; i++) {
                 counter_object.increment();
                 try {
                     System.err.println("Thread_one is runnning");
@@ -77,7 +77,7 @@ public class Threading {
         // method
         Thread thread_two = new Thread(() -> {
             // System.out.println("Current state of a thread " + thread_one.getState());
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i < 10; i++) {
                 counter_object.increment();
                 try {
                     System.out.println("Thread_two is running ");
